@@ -22,6 +22,22 @@ def add():
     db.close()
     return redirect("/")
 
+@app.route("/done/<int:id>")
+def done(id):
+    db = get_db()
+    db.execute("UPDATE tasks SET done = 1 WHERE id = ?",(id,))
+    db.commit()
+    db.close()
+    return redirect("/")
+
+@app.route("/delete/<int:id>")
+def delete():
+    db = get_db()
+    db.execute("DELETE FROM tasks WHERE id = ?",(id,))
+    db.commit()
+    db.close()
+    return redirect("/")
+
 if __name__ == "__main__":
     db = get_db
     db.execute("""

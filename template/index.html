@@ -10,5 +10,16 @@
         <input type="text" name="task" placeholder="Enter Task" required>
         <button>Add</button>
     </form>
+
+    <ul>
+        {% for task in tasks %}
+        <li class="{{ 'done' if task[2] }}">
+            {{ task[1] }}
+            <a href="/done/{{ task[0] }}">✅</a>
+            <a href="/delete/{{ task[0] }}">❌</a>
+        </li>
+        {% endfor %}
+    </ul>
+
 </body>
 </html>
