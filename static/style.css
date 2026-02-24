@@ -1,9 +1,41 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial;
     background: #f4f4f4;
     padding: 30px;
 }
 
 h1 {
     text-align: center;
+}
+
+form {
+    text-align: center;
+}
+
+input {
+    padding: 8px;
+    width: 200px;
+}
+
+button {
+    padding: 8px;
+}
+
+ul {
+    list-style: none;
+    width: 300px;
+    margin: auto;
+}
+
+li {
+    background: white;
+    padding: 10px;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.done {
+    text-decoration: line-through;
+    color: gray;
 }
